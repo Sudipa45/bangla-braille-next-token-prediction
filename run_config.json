@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-01-22 12:44:19",
+  "platform": "Linux-6.17.0-8-generic-x86_64-with-glibc2.42",
+  "python": "3.13.7",
+  "torch": "2.7.0+cu128",
+  "device": "cuda",
+  "cuda_device": "NVIDIA GeForce RTX 5090",
+  "data_dir": "/home/mithun-hossain/Desktop/Polarization/bangla_braille_lm_20k",
+  "out_dir": "runs/bilstm_attn_ls_logged",
+  "vocab_size": 50,
+  "train_size": 45000,
+  "val_size": 2500,
+  "test_size": 2500,
+  "hyperparameters": {
+    "data_dir": "/home/mithun-hossain/Desktop/Polarization/bangla_braille_lm_20k",
+    "epochs": 20,
+    "batch_size": 128,
+    "lr": 0.002,
+    "emb_dim": 128,
+    "hidden_dim": 256,
+    "layers": 2,
+    "dropout": 0.2,
+    "attn_dim": 256,
+    "label_smoothing": 0.05,
+    "out_dir": "runs/bilstm_attn_ls_logged"
+  },
+  "total_params": 2531122,
+  "trainable_params": 2531122
+}

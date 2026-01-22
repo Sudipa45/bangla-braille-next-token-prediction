@@ -1,0 +1,73 @@
+=== Run Configuration ===
+{
+  "timestamp": "2026-01-22 12:44:19",
+  "platform": "Linux-6.17.0-8-generic-x86_64-with-glibc2.42",
+  "python": "3.13.7",
+  "torch": "2.7.0+cu128",
+  "device": "cuda",
+  "cuda_device": "NVIDIA GeForce RTX 5090",
+  "data_dir": "/home/mithun-hossain/Desktop/Polarization/bangla_braille_lm_20k",
+  "out_dir": "runs/bilstm_attn_ls_logged",
+  "vocab_size": 50,
+  "train_size": 45000,
+  "val_size": 2500,
+  "test_size": 2500,
+  "hyperparameters": {
+    "data_dir": "/home/mithun-hossain/Desktop/Polarization/bangla_braille_lm_20k",
+    "epochs": 20,
+    "batch_size": 128,
+    "lr": 0.002,
+    "emb_dim": 128,
+    "hidden_dim": 256,
+    "layers": 2,
+    "dropout": 0.2,
+    "attn_dim": 256,
+    "label_smoothing": 0.05,
+    "out_dir": "runs/bilstm_attn_ls_logged"
+  },
+  "total_params": 2531122,
+  "trainable_params": 2531122
+}
+
+=== Model Architecture ===
+BiLSTMAttnNextToken(
+  (emb): Embedding(50, 128, padding_idx=0)
+  (lstm): LSTM(128, 256, num_layers=2, batch_first=True, dropout=0.2, bidirectional=True)
+  (dropout): Dropout(p=0.2, inplace=False)
+  (attn_W): Linear(in_features=512, out_features=256, bias=True)
+  (attn_v): Linear(in_features=256, out_features=1, bias=False)
+  (fc): Linear(in_features=512, out_features=50, bias=True)
+)
+
+Total parameters: 2,531,122
+Trainable parameters: 2,531,122
+
+Epoch 01 | train_loss=3.0193 | VAL: top@1=0.4044 | top@3=0.6388 | top@5=0.7172 | MRR=0.5512 | Coverage=5.40 | PPL=8.743 | KSR@1=0.4044 | KSR@3=0.6388 | KSR@5=0.7172 | time=3.9s
+Epoch 02 | train_loss=2.0957 | VAL: top@1=0.5164 | top@3=0.7148 | top@5=0.8008 | MRR=0.6413 | Coverage=4.12 | PPL=5.701 | KSR@1=0.5164 | KSR@3=0.7148 | KSR@5=0.8008 | time=3.4s
+Epoch 03 | train_loss=1.8273 | VAL: top@1=0.5628 | top@3=0.7452 | top@5=0.8244 | MRR=0.6770 | Coverage=3.79 | PPL=4.932 | KSR@1=0.5628 | KSR@3=0.7452 | KSR@5=0.8244 | time=3.4s
+Epoch 04 | train_loss=1.6723 | VAL: top@1=0.5696 | top@3=0.7504 | top@5=0.8252 | MRR=0.6834 | Coverage=3.74 | PPL=4.685 | KSR@1=0.5696 | KSR@3=0.7504 | KSR@5=0.8252 | time=3.4s
+Epoch 05 | train_loss=1.5626 | VAL: top@1=0.5884 | top@3=0.7652 | top@5=0.8260 | MRR=0.6965 | Coverage=3.68 | PPL=4.527 | KSR@1=0.5884 | KSR@3=0.7652 | KSR@5=0.8260 | time=3.4s
+Epoch 06 | train_loss=1.4763 | VAL: top@1=0.5956 | top@3=0.7664 | top@5=0.8292 | MRR=0.7028 | Coverage=3.63 | PPL=4.419 | KSR@1=0.5956 | KSR@3=0.7664 | KSR@5=0.8292 | time=3.5s
+Epoch 07 | train_loss=1.4032 | VAL: top@1=0.5964 | top@3=0.7684 | top@5=0.8352 | MRR=0.7045 | Coverage=3.70 | PPL=4.491 | KSR@1=0.5964 | KSR@3=0.7684 | KSR@5=0.8352 | time=3.5s
+Epoch 08 | train_loss=1.3307 | VAL: top@1=0.5960 | top@3=0.7696 | top@5=0.8348 | MRR=0.7037 | Coverage=3.78 | PPL=4.484 | KSR@1=0.5960 | KSR@3=0.7696 | KSR@5=0.8348 | time=3.5s
+Epoch 09 | train_loss=1.2736 | VAL: top@1=0.6088 | top@3=0.7756 | top@5=0.8284 | MRR=0.7104 | Coverage=3.81 | PPL=4.474 | KSR@1=0.6088 | KSR@3=0.7756 | KSR@5=0.8284 | time=3.4s
+Epoch 10 | train_loss=1.2207 | VAL: top@1=0.6088 | top@3=0.7644 | top@5=0.8292 | MRR=0.7082 | Coverage=3.93 | PPL=4.614 | KSR@1=0.6088 | KSR@3=0.7644 | KSR@5=0.8292 | time=3.4s
+Epoch 11 | train_loss=1.1651 | VAL: top@1=0.6128 | top@3=0.7676 | top@5=0.8264 | MRR=0.7101 | Coverage=3.87 | PPL=4.613 | KSR@1=0.6128 | KSR@3=0.7676 | KSR@5=0.8264 | time=3.4s
+Epoch 12 | train_loss=1.1223 | VAL: top@1=0.6184 | top@3=0.7708 | top@5=0.8296 | MRR=0.7139 | Coverage=3.99 | PPL=4.672 | KSR@1=0.6184 | KSR@3=0.7708 | KSR@5=0.8296 | time=3.4s
+Epoch 13 | train_loss=1.0782 | VAL: top@1=0.6168 | top@3=0.7720 | top@5=0.8240 | MRR=0.7122 | Coverage=4.13 | PPL=4.846 | KSR@1=0.6168 | KSR@3=0.7720 | KSR@5=0.8240 | time=3.5s
+Epoch 14 | train_loss=1.0378 | VAL: top@1=0.6024 | top@3=0.7700 | top@5=0.8316 | MRR=0.7059 | Coverage=4.09 | PPL=4.943 | KSR@1=0.6024 | KSR@3=0.7700 | KSR@5=0.8316 | time=3.5s
+Epoch 15 | train_loss=1.0045 | VAL: top@1=0.5980 | top@3=0.7668 | top@5=0.8284 | MRR=0.7029 | Coverage=4.17 | PPL=5.057 | KSR@1=0.5980 | KSR@3=0.7668 | KSR@5=0.8284 | time=3.5s
+Epoch 16 | train_loss=0.9780 | VAL: top@1=0.6072 | top@3=0.7684 | top@5=0.8224 | MRR=0.7058 | Coverage=4.43 | PPL=5.263 | KSR@1=0.6072 | KSR@3=0.7684 | KSR@5=0.8224 | time=3.5s
+Epoch 17 | train_loss=0.9532 | VAL: top@1=0.6076 | top@3=0.7632 | top@5=0.8212 | MRR=0.7050 | Coverage=4.38 | PPL=5.245 | KSR@1=0.6076 | KSR@3=0.7632 | KSR@5=0.8212 | time=3.4s
+Epoch 18 | train_loss=0.9247 | VAL: top@1=0.6160 | top@3=0.7576 | top@5=0.8152 | MRR=0.7088 | Coverage=4.45 | PPL=5.342 | KSR@1=0.6160 | KSR@3=0.7576 | KSR@5=0.8152 | time=3.5s
+Epoch 19 | train_loss=0.9034 | VAL: top@1=0.5992 | top@3=0.7596 | top@5=0.8140 | MRR=0.6975 | Coverage=4.72 | PPL=5.656 | KSR@1=0.5992 | KSR@3=0.7596 | KSR@5=0.8140 | time=3.4s
+Epoch 20 | train_loss=0.8839 | VAL: top@1=0.6016 | top@3=0.7608 | top@5=0.8052 | MRR=0.6979 | Coverage=4.77 | PPL=5.782 | KSR@1=0.6016 | KSR@3=0.7608 | KSR@5=0.8052 | time=3.5s
+
+=== Best checkpoint ===
+epoch=12 best_val_top1=0.6184
+TEST: top@1=0.6096 | top@3=0.7756 | top@5=0.8344 | MRR=0.7118 | Coverage=3.88 | PPL=4.598 | KSR@1=0.6096 | KSR@3=0.7756 | KSR@5=0.8344
+Saved best: runs/bilstm_attn_ls_logged/best.pt
+Saved last: runs/bilstm_attn_ls_logged/last.pt
+Saved config: runs/bilstm_attn_ls_logged/run_config.json
+Saved model summary: runs/bilstm_attn_ls_logged/model_summary.txt
+Saved epoch log: runs/bilstm_attn_ls_logged/epoch_log.csv

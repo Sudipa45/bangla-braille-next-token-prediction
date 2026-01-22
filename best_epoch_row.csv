@@ -1,0 +1,2 @@
+epoch,train_loss,val_top1,val_top3,val_top5,val_mrr,val_coverage,val_ppl,val_mean_ce
+12,1.122281,0.6184,0.7708,0.8296,0.713913,3.9896,4.672349,1.541662

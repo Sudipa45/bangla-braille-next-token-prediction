@@ -1,0 +1,12 @@
+=== Model Architecture ===
+BiLSTMAttnNextToken(
+  (emb): Embedding(50, 128, padding_idx=0)
+  (lstm): LSTM(128, 256, num_layers=2, batch_first=True, dropout=0.2, bidirectional=True)
+  (dropout): Dropout(p=0.2, inplace=False)
+  (attn_W): Linear(in_features=512, out_features=256, bias=True)
+  (attn_v): Linear(in_features=256, out_features=1, bias=False)
+  (fc): Linear(in_features=512, out_features=50, bias=True)
+)
+
+Total parameters: 2,531,122
+Trainable parameters: 2,531,122
