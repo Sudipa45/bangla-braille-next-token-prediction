@@ -12,7 +12,7 @@
   "val_size": 2500,
   "test_size": 2500,
   "hyperparameters": {
-    "data_dir": "/home/mithun-hossain/Desktop/Polarization/bangla_braille_lm_20k",
+    "data_dir": "/home/sudipa-saha/Desktop/Polarization/bangla_braille_lm_20k",
     "epochs": 20,
     "batch_size": 128,
     "lr": 0.002,
