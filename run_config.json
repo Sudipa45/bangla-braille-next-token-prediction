@@ -5,7 +5,7 @@
   "torch": "2.7.0+cu128",
   "device": "cuda",
   "cuda_device": "NVIDIA GeForce RTX 5090",
-  "data_dir": "/home/mithun-hossain/Desktop/Polarization/bangla_braille_lm_20k",
+  "data_dir": "/home/sudipa-saha/Desktop/Polarization/bangla_braille_lm_20k",
   "out_dir": "runs/bilstm_attn_ls_logged",
   "vocab_size": 50,
   "train_size": 45000,
